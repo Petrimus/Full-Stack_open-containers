@@ -1,0 +1,10 @@
+Now starting the express application with the correct environment variable should work:
+
+$ MONGO_URL=mongodb://the_username:the_password@localhost:3456/the_database npm run dev
+
+Let's check that the http://localhost:8000/todos returns all todos. It should return the two todos we initialized. We can use postman to test the basic functionality for todos like delete todo.
+Pitäisi olla localhost:3000
+
+.env muuttuja, joka tulostuu MONGO_URL: "mongodb://the_username:the_password@localhost:3456/the_database",
+
+12.14. Pitääkö tässä tehdä uusi komponentti todo ja testata sitä? Eiku se on List-komponentin map metodissa ja sitä extract tarkoitti.

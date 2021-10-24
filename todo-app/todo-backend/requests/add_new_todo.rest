@@ -1,0 +1,7 @@
+POST http://localhost:3000/todos/
+Content-Type: Application/json
+
+{
+    "text": "moor todos",
+    "done": false
+}

@@ -1,0 +1,5 @@
+docker exec -it mongo_database bash
+mongo -u root -p example
+use the_database
+show collections
+db.todos.insertOne({text: "ncrease the number of tools in my toolbelt", status: false})

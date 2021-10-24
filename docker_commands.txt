@@ -1,0 +1,15 @@
+## backend dev
+    docker-compose -f docker-compose.dev.yml up
+    docker build -t express-server . && docker run -p 3000:3000 express-server
+
+
+## front-end dev 
+    docker build -f ./dev.Dockerfile -t hello-front-dev .
+    docker run -p 3000:3000 -v "$(pwd):/usr/src/app/" hello-front-dev
+
+    docker-compose -f docker-compose.dev.yml up
+
+    docker-compose -f docker-compose.dev.yml run debug-helper wget -O - http://hello-front-dev:3000
+
+## backend
+    docker-compose up --build.

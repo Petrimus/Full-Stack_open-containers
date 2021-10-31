@@ -1,20 +1,15 @@
 services:
-  app:
-    image: hello-front-dev
+  app:    
     build:
-      context: ./todo-frontend # The context will pick this directory as the "build context"
-      dockerfile: Dockerfile # This will simply tell which dockerfile to read
-    volumes:
-      - ./todo-frontend:/usr/src/app # The path can be relative, so ./ is enough to say "the same location as the docker-compose.yml"   
-    environment: 
-      - REACT_APP_BACKEND_URL=http://localhost:8080/api
-    container_name: hello-front-dev # This will name the container hello-front-dev
+      context: ./todo-frontend 
+      dockerfile: Dockerfile    
+    container_name: todo-front
 
   server:
     build:
       context: ./todo-backend
       dockerfile: Dockerfile 
-    container_name: backend-server-dev
+    container_name: todo-backend
     ports: 
       - 3001   
     environment: 

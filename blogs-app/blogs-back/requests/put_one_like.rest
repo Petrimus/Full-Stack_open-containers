@@ -1,0 +1,9 @@
+POST http://localhost:3003/api/blogs/
+content-type: application/json
+
+ {
+ "title": "Petri on tehnyt isoja blogeja",
+  "author": "Petri Palmu",
+  "url": "String",
+  "likes": 12
+}

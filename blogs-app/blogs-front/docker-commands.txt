@@ -1,0 +1,15 @@
+## frontend dev
+    REACT_APP_BACKEND_URL=http://localhost:3001/api npm start
+
+    docker build -f ./dev.Dockerfile -t blogs-app-front-dev .
+    docker run -p 3000:3000 -v "$(pwd):/usr/src/app/" --env URI=http://localhost:3001/api blogs-app-front-dev
+    docker run -p 3000:3000 -v "$(pwd):/usr/src/app/" blogs-app-front-dev
+
+    docker-compose -f docker-compose.dev.yml up
+    docker-compose -f docker-compose.dev.yml run debug-helper wget -O - http://hello-front-dev:3000
+
+
+## backend dev
+    
+    docker build -f ./dev.Dockerfile -t blogs-app-back-dev . && docker run -p 3001:3001 blogs-app-back-dev
+    docker-compose -f docker-compose.dev.yml up

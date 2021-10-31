@@ -1,0 +1,20 @@
+services:
+  blogs-front:
+    image: blogs-app-front-dev
+    build:
+      context: ./blogs-front
+      dockerfile: dev.Dockerfile
+    volumes: 
+      - ./blogs-front:/usr/src/app
+    ports:
+      - 3000:3000   
+    container_name: blog-front
+
+  blogs-back:
+    build:
+      context: ./blogs-back
+      dockerfile: dev.Dockerfile
+    container_name: blog-back
+    ports:
+      - 30001:30001
+

@@ -1,0 +1,10 @@
+POST http://localhost:3003/api/blogs/
+content-type: application/json
+// Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InBwYWxtdSIsImlkIjoiNWMwNThmNWVmYmM4NDAwYzU4MzYxNzgwIiwiaWF0IjoxNTQzOTIxNjc2fQ.DGJqaWVxSNR_aSajfvLmO3zO_58DR-W-pVhkIoqc3PA
+
+ {
+ "title": "Token autentikointi on helppoa",
+  "author": "Petri Palmu",
+  "url": "localhost.mikalie",
+  "likes": 7
+}

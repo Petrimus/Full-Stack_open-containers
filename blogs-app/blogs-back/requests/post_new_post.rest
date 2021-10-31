@@ -1,0 +1,10 @@
+POST http://localhost:3003/api/blogs/
+content-type: application/json
+
+ {
+ "title": "Ja vielä toinen samalle käyttäjälle",
+  "author": "Petri Palmu",
+  "url": "localhost.mikalie",
+  "likes": 7,
+  "userId": "5c058f5efbc8400c58361780"
+}
